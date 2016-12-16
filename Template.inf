@@ -1,0 +1,40 @@
+## @file
+# Template UEFI driver
+# 
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = Template
+  FILE_GUID                      = AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+
+  ENTRY_POINT                    = InitializeTemplate
+
+
+[Sources]
+  DriverDiagnostics.c
+  DriverConfiguration.c
+  ComponentName.c
+  Template.c
+  Template.h
+
+
+[Packages]
+  MdePkg/MdePkg.dec
+  
+[LibraryClasses]
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+  BaseMemoryLib
+  UefiLib
+  UefiDriverEntryPoint
+  BaseLib
+  DebugLib
+  
+
+[Guids]
+
+[Protocols]
+  
